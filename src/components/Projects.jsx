@@ -15,7 +15,7 @@ function Projects() {
     caseLink: "https://github.com/Rahulgupta7070/Simon-Says-Game" },
     { title: "Smart Contact Manager", desc: "Spring Boot, Thymeleaf, MySQL, Hibernate, Spring Security ,Built a secure full-stack contact manager with login/registration, role-based access, and responsive UI. · Integrated MySQL using Hibernate.", live: true, case: true , liveLink: "https://example.com/hospital",
     caseLink: "https://github.com/Rahulgupta7070/SmartContactManager/tree/main/src"},
-    { title: "Portfolio ", desc: "Portfolio site using HTML, CSS, JS ", live: true, case: true, liveLink: "https://portfolio-jade-chi-27.vercel.app/#contact",
+    { title: "Portfolio ", desc: "Portfolio site using HTML, CSS, JS ", live: true, case: true, liveLink: "https://portfoliogupta.vercel.app/",
     caseLink: "https://github.com/Rahulgupta7070/portfolio" }
   ];
 
