@@ -34,7 +34,7 @@ function About() {
           className="flex justify-center"
         >
           <img
-            src="./public/p.JPG"
+            src="/about-photo.jpg"
             alt="Rahul"
             className="w-80 h-80 object-cover rounded-2xl shadow-xl"
           />
