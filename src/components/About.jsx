@@ -36,7 +36,7 @@ function About() {
           <img
             src="/about-photo.jpg"
             alt="Rahul"
-            className="w-80 h-80 object-cover rounded-2xl shadow-xl"
+            className="w-80 h-85 object-cover rounded-2xl shadow-xl"
           />
         </motion.div>
 
