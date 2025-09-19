@@ -6,7 +6,7 @@ function About() {
   const isInView = useInView(ref, { amount: 0.3 });
 
   return (
-    <div className="max-w-screen-xl mx-auto bg-zinc-900 min-h-screen pt-20 md:pt-32 pb-10 px-6 lg:px-20">
+    <div className="max-w-screen-xl mx-auto bg-zinc-900 min-h-screen pt-10 md:pt-32 pb-10 px-6 lg:px-20">
       {/* Heading */}
       <motion.div
         ref={ref}
