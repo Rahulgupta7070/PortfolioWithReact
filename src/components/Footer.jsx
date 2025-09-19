@@ -53,7 +53,7 @@ function Footer() {
         >
           <p>Email: <a href="mailto:krrahul87099@gmail.com" className="hover:text-indigo-500">krrahul87099@gmail.com</a></p>
           <p>Phone: <a href="tel:7070629414" className="hover:text-indigo-500">7070629414</a></p>
-          <a href="/RahulKumarCv.pdf" download className="hover:text-indigo-500 underline mt-6">
+          <a href="/RahulCv.pdf" download className="hover:text-indigo-500 underline mt-6">
             Download CV
           </a>
         </motion.div>

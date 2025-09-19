@@ -3,29 +3,51 @@ import React, { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
+  const form = useRef();
 
-   //heading ka animation
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_os135na",    // ✅ Service ID
+        "template_ow70m4j",   // ✅ Template ID
+        form.current,
+        "tBAhtrYWYoSJ6ti_4"    // ✅ Public Key
+      )
+      .then(
+        (result) => {
+          console.log("SUCCESS!", result.text);
+          alert("✅ Message Sent Successfully!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          alert("❌ Message Failed! Check console for details.");
+        }
+      );
+  };
+
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.3 }); //30% pe hoga animation
+  const isInView = useInView(ref, { amount: 0.3 });
 
   return (
     <div className="bg-zinc-900 text-black py-20 px-5 md:px-0">
       <div className="max-w-screen-lg mx-auto text-center">
         {/* Heading */}
-         <motion.div
-              ref={ref}
-              initial={{ opacity: 0, y: 60 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="max-w-screen-xl mx-auto mb-12 px-5 text-center"
-            >
-              <h1 className="text-5xl font-extrabold text-zinc-300">
-                Contact<span className="text-indigo-600"> Me</span>
-              </h1>
-              
-            </motion.div>
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 60 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="max-w-screen-xl mx-auto mb-12 px-5 text-center"
+        >
+          <h1 className="text-5xl font-extrabold text-zinc-300">
+            Contact <span className="text-indigo-600">Me</span>
+          </h1>
+        </motion.div>
 
         {/* Info Section */}
         <motion.div
@@ -37,7 +59,7 @@ function Contact() {
           <p className="text-lg text-zinc-300">krrahul87099@gmail.com</p>
           <p className="text-lg text-zinc-300">+91 7070629414</p>
           <a
-            href="/RahulKumarCv.pdf" // CV file path
+            href="/RahulCv.pdf"
             download
             className="mt-3 inline-block bg-indigo-600 text-white px-5 py-2 rounded-lg hover:bg-indigo-700 transition-colors duration-300"
           >
@@ -45,8 +67,10 @@ function Contact() {
           </a>
         </motion.div>
 
-        {/* Form */}
+        {/* Contact Form */}
         <motion.form
+          ref={form}
+          onSubmit={sendEmail}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -55,15 +79,21 @@ function Contact() {
           <input
             type="text"
             placeholder="Your Name"
+            name="from_name"
+            required
             className="p-3 rounded-lg border border-zinc-300 focus:outline-none focus:ring-2 focus:ring-indigo-600"
           />
           <input
             type="email"
             placeholder="Your Email"
+            name="your_email"
+            required
             className="p-3 rounded-lg border border-zinc-300 focus:outline-none focus:ring-2 focus:ring-indigo-600"
           />
           <textarea
             placeholder="Your Message"
+            name="message"
+            required
             className="p-3 rounded-lg border border-zinc-300 focus:outline-none focus:ring-2 focus:ring-indigo-600 resize-none h-32"
           ></textarea>
           <button
