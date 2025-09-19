@@ -33,53 +33,55 @@ function Home() {
     }
   });
 
-
-  // Mouse X position state
   const [mouseX, setMouseX] = useState(0);
 
   const handleMouseMove = (e) => {
     const centerX = window.innerWidth / 2;
-    const offsetX = (e.clientX - centerX) / centerX; // -1 to 1
-    setMouseX(offsetX * 50); // max ±50px
+    const offsetX = (e.clientX - centerX) / centerX;
+    setMouseX(offsetX * 50);
   };
 
   return (
-    <div className='w-full relative flex mt-20'  onMouseMove={handleMouseMove}>
-      <div className="max-w-screen-xl mx-auto text-center relative py-20 px-4 md:px-0">
+    <div 
+      className="w-full relative flex flex-col md:flex-row mb-24 mt-32 md:mt-50"
+      onMouseMove={handleMouseMove}
+    >
+      {/* Text Section */}
+      <div className="max-w-screen-xl mx-auto text-center relative py-6 px-4 md:px-0">
        
-           {/* Tagline */}
+        {/* Tagline */}
         <motion.p 
-          initial={{ opacity: 0, y: 20 }} 
+          initial={{ opacity: 0, y: 30 }} 
           animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 1, delay: 0.6 }}
-          className="text-[3vw] font-semibold text-[#7443ff] mt-8"
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="text-[6vw] md:text-[3vw] font-semibold text-[#7443ff] mt-2"
         >
           Hey I am,
         </motion.p>
 
-        {/* Big Name with Gradient */}
+        {/* Big Name */}
         <motion.h1 
           style={{ x: mouseX }} 
-            whileHover={{ scale: 1.2 }}       // NEW: Hover zoom effect
-          initial={{ opacity: 0, scale: 1.1 }} 
-          animate={{ opacity: 1, scale: 1 }} 
-          transition={{ duration: 1, delay: 0.3 ,ype: "spring", stiffness: 200 }}
-          className="text-[6vw] md:text-[20vw] leading-none font-bold tracking-tight bg-zinc-300 select-none bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-500 mt-5"
+          whileHover={{ scale: 1.1 }}
+          initial={{ opacity: 0, scale: 1.3 }}  
+          animate={{ opacity: 1, scale: 1 }}     
+          transition={{ duration: 1, delay: 0.5, type: "spring", stiffness: 180 }}
+          className="text-[14vw] md:text-[18vw] leading-none font-bold tracking-tight bg-zinc-300 select-none bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-indigo-500 mt-4"
         >
           Rahul
         </motion.h1>
 
-        {/* Tagline */}
+        {/* Skills */}
         <motion.p 
-          initial={{ opacity: 0, y: 20 }} 
+          initial={{ opacity: 0, y: 30 }} 
           animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 1, delay: 0.6 }}
-          className="text-xl font-semibold text-[#7443ff] mt-6"
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="text-base md:text-xl font-semibold text-[#7443ff] mt-4"
         >
           Java &nbsp;|&nbsp; Spring Boot &nbsp;|&nbsp; Web Development
         </motion.p>
 
-        {/* Scroll-based Images */}
+        {/* Scroll Images */}
         <div className='absolute top-0 w-full h-full'>
           {images.map((elem, index) => 
             elem.isActive && (
@@ -87,32 +89,30 @@ function Home() {
                 key={index}
                 src={elem.url}
                 style={{ top: elem.top, left: elem.left }}
-                className='absolute w-40 rounded-lg -translate-x-[50%] -translate-y-[50%] cursor-pointer hover:scale-105 transition-transform duration-500'
+                className='absolute w-24 md:w-40 rounded-lg -translate-x-[50%] -translate-y-[50%] cursor-pointer hover:scale-105 transition-transform duration-500'
                 alt=""
               />
             )
           )}
         </div>
       </div>
-      {/* Portfolio Showcase Card with Background Shadow */}
-<div className="relative mt-60 w-72 h-72 mx-auto group">
-  {/* Outer Violet Glow */}
-  <div className="absolute -inset-6 bg-violet-500 rounded-3xl blur-3xl opacity-40 group-hover:opacity-80 transition-all duration-700 ease-in-out"></div>
 
-  {/* Main Card */}
-  <div className="relative w-72 h-72 rounded-2xl overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-500">
-    <img
-      className="w-full h-full object-cover rounded-2xl border border-indigo-600"
-      src="/p.JPG"
-      alt="Portfolio"
-    />
-    {/* Hover Overlay Text */}
-    <div className="absolute inset-0 bg-black/40 opacity-100 group-hover:opacity-0 transition duration-500 flex items-center justify-center">
-      <p className="text-white text-lg font-semibold tracking-wide"></p>
-    </div>
-  </div>
-</div>
-
+      {/* Portfolio Photo */}
+      <motion.div 
+        initial={{ opacity: 0, y: 80, scale: 0.9 }} 
+        animate={{ opacity: 1, y: 0, scale: 1 }} 
+        transition={{ duration: 1, delay: 1.2, type: "spring", stiffness: 120 }}
+        className="relative mt-6 md:mt-16 w-72 h-72 md:w-96 md:h-96 mx-auto group order-last md:order-none"
+      >  
+        <div className="absolute -inset-6 bg-violet-500 rounded-3xl blur-3xl opacity-40 group-hover:opacity-80 transition-all duration-700 ease-in-out"></div>
+        <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-500">
+          <img
+            className="w-full h-full object-cover rounded-2xl border border-indigo-600"
+            src="/p.JPG"
+            alt="Portfolio"
+          />
+        </div>
+      </motion.div>
     </div>
   );
 }

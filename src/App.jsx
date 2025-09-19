@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import ScrollProgress from './components/ScrollProgress';
 
 function App() {
+
   const [loading, setLoading] = useState(true);
   const [percentage, setPercentage] = useState(0);
 
@@ -51,7 +52,7 @@ function App() {
       <ScrollProgress/>
       <Navbar />
 
-      <div id="home" className="min-h-screen scroll-mt-[56px]"><Home/></div>
+      <div id="home" className="scroll-mt-[56px]"><Home/></div>
       <div id="about" className="min-h-screen scroll-mt-[56px]"><About/></div>
       <div id="project" className="min-h-screen scroll-mt-[56px]"><Projects /></div>
       <div id="services" className="min-h-screen scroll-mt-[56px]"><Services/></div>

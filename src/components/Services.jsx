@@ -34,19 +34,7 @@ function Services() {
         {/* Frontend Card */}
         <Card 
           title="Frontend Development"
-          desc="Crafting pixel-perfect, responsive, and user-friendly interfaces with modern tools like React.js, Tailwind CSS, and JavaScript. I focus on:
-
-Smooth animations & transitions for a polished, interactive feel.
-
-Reusable components for faster development and maintainable code.
-
-Cross-device compatibility to ensure perfect performance on all screen sizes.
-
-Optimized performance with minimal load times and efficient rendering.
-
-Accessibility to make websites usable for everyone.
-
-Turning ideas into dynamic, visually appealing, and high-performance websites that delight users."
+          desc="I create clean, responsive, and user-friendly websites using React.js, Tailwind CSS, and JavaScript. I focus on smooth animations, reusable components, and fast performance across all devices. I also make sure websites are accessible for everyone and visually appealing, turning ideas into dynamic and high-performing web applications."
           hovers="true"
           delay={0.1}
         />
@@ -55,14 +43,7 @@ Turning ideas into dynamic, visually appealing, and high-performance websites th
         <Card 
           
           title="Backend Development"
-          desc="Backend Development
-Providing robust and scalable backend solutions using Java and Spring Boot. Key focus areas:
-Collections, Exception Handling & Multi-threading for efficient and reliable code.
-REST APIs & Microservices design for modular and maintainable applications.
-Database integration using JPA/Hibernate for seamless data management.
-Performance optimization to ensure fast and responsive server-side operations.
-Secure and enterprise-grade systems with scalable architecture.
-Enabling end-to-end full-stack development by connecting backend with frontend efficiently."
+          desc="I build strong and scalable backend systems using Java and Spring Boot. I work on collections, exception handling, and multi-threading to write efficient and reliable code. I design REST APIs and microservices for maintainable applications, integrate databases using JPA/Hibernate, and optimize performance for fast servers. I also focus on security and connect backend with frontend for complete full-stack solutions."
           hovers="true"
           delay={0.1}
         />
@@ -70,14 +51,7 @@ Enabling end-to-end full-stack development by connecting backend with frontend e
         {/* Video Editing Card */}
         <Card 
           title="Video Editing"
-          desc="Video Editing
-Offering premium video editing and Canva Pro design services for social media, branding, and content creation. Key highlights:
-Professional video editing using Adobe Premiere Pro and Canva Pro.
-Engaging content creation for social media, advertisements, and branding campaigns.
-Creative visual storytelling to make videos more impactful and memorable.
-Optimized formats for multiple platforms including Instagram, YouTube, and LinkedIn.
-Attention to detail with smooth transitions, color grading, and audio enhancements.
-Helping brands and individuals communicate their message effectively through visually stunning videos."
+          desc="I provide professional video editing and design services using Adobe Premiere Pro and Canva Pro. I create engaging content for social media, branding, and advertisements with smooth transitions, color grading, and audio improvements. My goal is to tell stories visually and help brands and individuals communicate their message effectively across platforms like Instagram, YouTube, and LinkedIn."
           hovers="true"
           delay={0.1}
         />
