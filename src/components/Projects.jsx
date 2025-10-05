@@ -4,6 +4,7 @@ import { motion, useInView } from 'motion/react';
 
 function Projects() {
   const product = [
+     { title: "RahulGemi", desc: "AI-powered chat assistant built with React and Gemini API for smart conversations and task suggestions.", live: true, case:true, liveLink: "https://rahul-gemi.vercel.app/", caseLink: "https://github.com/Rahulgupta7070/RahulGemini" },
     { title: "Car Showroom Management System", desc: "Built a Java console app for car showroom management using core OOP principles", live: true, case:true, liveLink: "https://www.linkedin.com/in/kumarrahulgupta/", caseLink: "https://github.com/Rahulgupta7070/Car-Showrooms-Management-System/tree/main/src" },
     { title: "Hospital Management System", desc: "Built a Java console app for hospital management using OOP and JDBC with MySQL.", live: true, case: true, liveLink: "https://example.com/hospital", caseLink: "https://github.com/Rahulgupta7070/Hospital-Management-System/tree/main/src/HospitalManagementSystem" },
     { title: "Obys Agency", desc: "Cloned Obys Agency site using HTML, CSS, JS with GSAP and Locomotive Scroll for smooth animations and effects.", live: true, case: true, liveLink: "https://obys-agency-rho-jet.vercel.app/", caseLink: "https://github.com/Rahulgupta7070/Obys-Agency" },
@@ -19,6 +20,7 @@ function Projects() {
   const isInView = useInView(ref, { amount: 0.3 });
 
   const images = [
+    "https://tldv.io/wp-content/uploads/2025/01/Gemini-Alternatives.jpg",
     "/CarShowRoom.png",
     "/Hospital.png",
     "https://media.licdn.com/dms/image/v2/C560BAQHdN7EU0ufHXQ/company-logo_200_200/company-logo_200_200/0/1631437812688/obys_logo?e=2147483647&v=beta&t=wfpwoH2J_9eICve9JQ2Xkdbng3WHRTTsqxzynJgYruE",
